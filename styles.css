@@ -5,7 +5,7 @@ body{
     background-color: aqua;
 }
 .app{
-    height:400px;
+    height:500px;
     width: 500px;
     background-color: floralwhite;
     margin:130px auto 0;
@@ -14,4 +14,17 @@ body{
 }
 h1{
     text-align: center;
+}
+.btn{
+    width:100%;
+    padding: 10px;
+    margin:8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: orchid;
+    color: #fff;
 }
