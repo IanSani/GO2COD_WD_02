@@ -32,3 +32,16 @@ h1{
     background-color: orchid;
     color: #fff;
 }
+#next-btn{
+    padding:5px;
+    margin:10px auto 0;
+    background-color: cornflowerblue;
+    font-size: 18px;
+    border-radius: 3px;
+    width:100px;
+    display:block;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    
+}
