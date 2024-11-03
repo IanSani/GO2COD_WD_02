@@ -63,3 +63,16 @@ const questions=[
         ]
     }
 ]
+
+let currentQuestionIndex=0;
+
+function startQuiz(){
+    let score=0;
+    let currentQuestionIndex=0;
+    nextButton.innerHTML="Next";
+    showQuestion()
+}
+
+function showQuestion(){
+let currentQuestion=questions[currentQuestionIndex];
+}
