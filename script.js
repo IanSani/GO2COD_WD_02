@@ -8,7 +8,7 @@ const questions=[
         answers:[{
             text:"declare",correct:"false"
         },{
-            text:"let",correct="true"
+            text:"let",correct:"true"
         },{
             text:"def",correct:"false"
         },
@@ -39,6 +39,27 @@ const questions=[
             },{
                 text:"Not an object",correct:"false"
             }
+        ]
+    },{
+        question:'Which of the following symbols is used for strict equality comparison in JavaScript?',
+        answers:[
+            {
+                text:"==",correct:"false"
+            },{
+                text:"=",correct:"false"
+            },{
+                text:"===",correct:"true"
+            },{
+                text:">=",correct:"false"
+            }
+        ]
+    },{
+        question:" What will typeof null return in JavaScript?",
+        answers:[
+            {text:"undefined",correct:"false"},
+            {text:"null",correct:"false"},
+            {text:"object",correct:"true"},
+            {text:"boolean",correct:"false"}
         ]
     }
 ]
