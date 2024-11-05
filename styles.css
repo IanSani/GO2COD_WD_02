@@ -45,3 +45,10 @@ h1{
     cursor: pointer;
     
 }
+.correct{
+    background-color: aquamarine;
+}
+
+.incorrect{
+    background-color: crimson;
+}
