@@ -65,6 +65,7 @@ const questions=[
 ]
 
 let currentQuestionIndex=0;
+let score=0;
 
 function startQuiz(){
     let score=0;
@@ -77,5 +78,12 @@ function showQuestion(){
 let currentQuestion=questions[currentQuestionIndex];
 let questionNo=currentQuestionIndex + 1;
 questionElement.innerHTML=questionNo+ ". " + currentQuestion.question;
+questions.answers.forEach(answer=> {
+    const button=document.createElement('button');
+    button.classList.add('btn');
+    button.innerText=answer.text;
+    
+    
+});
 
 }
