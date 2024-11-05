@@ -80,12 +80,16 @@ function showQuestion(){
 let currentQuestion=questions[currentQuestionIndex];
 let questionNo=currentQuestionIndex + 1;
 questionElement.innerHTML=questionNo+ ". " + currentQuestion.question;
+answerElement.innerHTML="";
 currentQuestion.answers.forEach(answer=> {
     const button=document.createElement('button');
     button.innerHTML=answer.text;
     button.classList.add('btn');
     answerElement.appendChild(button);
-    
+    if(answer.correct){
+        button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click',selectAnswer)
 });
 }
 
