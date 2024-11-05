@@ -28,9 +28,12 @@ h1{
     text-align: left;
     font-weight: 600;
 }
-.btn:hover{
+.btn:hover:not([disabled]){
     background-color: orchid;
     color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
 }
 #next-btn{
     padding:5px;
