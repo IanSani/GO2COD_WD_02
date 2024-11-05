@@ -39,7 +39,7 @@ h1{
     font-size: 18px;
     border-radius: 3px;
     width:100px;
-    display:block;
+    display:none;
     color: #fff;
     border: 0;
     cursor: pointer;

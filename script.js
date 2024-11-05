@@ -1,6 +1,3 @@
-const questionElement=document.getElementsByClassName('question');
-const answerElement=document.getElementsByClassName('answers');
-const nextButton=document.getElementById("next-btn");
 
 const questions=[
     {
@@ -64,26 +61,32 @@ const questions=[
     }
 ]
 
+const questionElement=document.getElementById('question');
+const answerElement=document.getElementById('answers-buttons');
+const nextButton=document.getElementById("next-btn");
+
+
 let currentQuestionIndex=0;
 let score=0;
 
 function startQuiz(){
-    let score=0;
-    let currentQuestionIndex=0;
+    score=0;
+    currentQuestionIndex=0;
     nextButton.innerHTML="Next";
-    showQuestion()
+    showQuestion();
 }
 
 function showQuestion(){
 let currentQuestion=questions[currentQuestionIndex];
 let questionNo=currentQuestionIndex + 1;
 questionElement.innerHTML=questionNo+ ". " + currentQuestion.question;
-questions.answers.forEach(answer=> {
+currentQuestion.answers.forEach(answer=> {
     const button=document.createElement('button');
+    button.innerHTML=answer.text;
     button.classList.add('btn');
-    button.innerText=answer.text;
-    
+    answerElement.appendChild(button);
     
 });
-
 }
+
+startQuiz();
