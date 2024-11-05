@@ -77,10 +77,10 @@ function startQuiz(){
 }
 
 function showQuestion(){
+    resetState()
 let currentQuestion=questions[currentQuestionIndex];
 let questionNo=currentQuestionIndex + 1;
 questionElement.innerHTML=questionNo+ ". " + currentQuestion.question;
-answerElement.innerHTML="";
 currentQuestion.answers.forEach(answer=> {
     const button=document.createElement('button');
     button.innerHTML=answer.text;
@@ -91,6 +91,13 @@ currentQuestion.answers.forEach(answer=> {
     }
     button.addEventListener('click',selectAnswer)
 });
+}
+
+function resetState(){
+    nextButton.style.display="none";
+    while(answerElement.firstChild){
+        answerElement.removeChild(answerElement.firstChild)
+    }
 }
 
 function selectAnswer(e){
@@ -112,8 +119,10 @@ function selectAnswer(e){
 }
 
 function showScore(){
+    resetState()
     questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML= "Play Again";
+    nextButton.style.display="block";
 }
 
 function handleNextButton(){
